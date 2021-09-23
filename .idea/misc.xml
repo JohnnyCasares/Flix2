@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix viejo/app/src/main/res/layout-land/item_movie.xml" value="0.13125" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix viejo/app/src/main/res/layout/item_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/drawable/default_indicator.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/drawable/gradient.xml" value="0.2203125" />
+        <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/drawable/indicator_selector.xml" value="0.1" />
+        <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/drawable/selected_indicator.xml" value="0.1" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout-land/item_movie.xml" value="0.25" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout/activity_detail.xml" value="0.33" />
-        <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout/item_movie.xml" value="0.2765273311897106" />
         <entry key="..\:/Users/Jhony/AndroidStudioProjects/Flix/app/src/main/res/layout/slide_item.xml" value="0.25" />
       </map>
