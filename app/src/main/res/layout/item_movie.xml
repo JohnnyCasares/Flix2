@@ -54,13 +54,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="42dp"
-        android:text="TextView"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toStartOf="@+id/tvOverview"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
+        app:layout_constraintTop_toBottomOf="@+id/ivPoster"
+        tools:text="mm/dd/yyyy" />
 
     <View
         android:id="@+id/divider2"

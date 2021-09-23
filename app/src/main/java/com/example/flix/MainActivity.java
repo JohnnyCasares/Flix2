@@ -3,11 +3,13 @@ package com.example.flix;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.flix.adapters.MovieAdapter;
+import com.example.flix.adapters.SlideAdapter;
 import com.example.flix.models.Movie;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -31,18 +33,23 @@ public class MainActivity extends AppCompatActivity {
 
     List<Movie> movies;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ViewPager sliderPager =findViewById(R.id.slider_pager);
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
         movies = new ArrayList<>();
 
-        //CREATE THE ADAPTER
+        //CREATE THE ADAPTERS
+        SlideAdapter slideAdapter = new SlideAdapter(this, movies);
         MovieAdapter movieAdapter = new MovieAdapter(this, movies);
         //Set the adapter on the recycler view
         rvMovies.setAdapter(movieAdapter);
+        sliderPager.setAdapter(slideAdapter);
+
         //Set a layout Manager on the recycler view
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
@@ -59,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.i(TAG, "Results" + results.toString());
                     movies.addAll(Movie.fromJsonArray(results));
                     movieAdapter.notifyDataSetChanged();
+                    slideAdapter.notifyDataSetChanged();
                     Log.i(TAG, "Movies " + movies.size());
 
                 }catch (JSONException e){

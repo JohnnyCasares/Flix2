@@ -3,15 +3,11 @@ package com.example.flix.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,7 +20,6 @@ import com.example.flix.models.Movie;
 
 import org.parceler.Parcels;
 
-import java.security.acl.LastOwnerException;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
@@ -74,7 +69,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
-        TextView realeaseDate;
+        TextView releaseDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,7 +77,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
             container = itemView.findViewById(R.id.container);
-            realeaseDate = itemView.findViewById(R.id.releaseDate);
+            releaseDate = itemView.findViewById(R.id.releaseDate);
 
 
         }
@@ -94,7 +89,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverView());
             String imageURL;
-            realeaseDate.setText("Release Date: \n" + mm + "/" + dd + "/" + yyyy);
+            releaseDate.setText("Release Date: \n" + mm + "/" + dd + "/" + yyyy);
 
 
             //if phone is in landscape
